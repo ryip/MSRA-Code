@@ -1,3 +1,9 @@
+
+% Improvement on original DTV solver by implementing vertical, horizontal,
+% and diagonal encouragement norms.
+% Original code done by C. Fernandez-Granda
+% Modifications done by Richard Yip
+
 % Function which applies transform-invariant directional total-variation 
 % regularization to perform image super-resolution. For more information see 
 % "Super-resolution via Transform-invariant Group-sparse Regularization" by
