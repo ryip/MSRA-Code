@@ -1,3 +1,7 @@
+% Modified projection onto the l_infinity l_2 ball that incorporates a diagonal component for our DTV
+% Original code done by C. Fernandez-Granda
+% Modifications done by Richard Yip
+
 % Projection onto the l_infinity l_2 ball
 %
 % Author: Carlos Fernandez-Granda
