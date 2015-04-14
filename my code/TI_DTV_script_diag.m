@@ -1,3 +1,8 @@
+% Improvement on original DTV solver by implementing vertical, horizontal,
+% and diagonal encouragement norms.
+% Original code done by C. Fernandez-Granda
+% Modifications done by Richard Yip
+
 % Script to super-resolve an image by applying transform-invariant 
 % directional total-variation regularization. For more information see 
 % "Super-resolution via Transform-invariant Group-sparse Regularization" by
@@ -22,7 +27,7 @@ beta=0.5;
 
 image_number=6; % Change this number to super-resolve other images
 
-img_name = ['C:\Users\Richard\Documents\ MSRA\TI_DTV_code\images\img' num2str(image_number) '.jpg'];
+img_name = ['C:\Users\Richard\Documents\Â MSRA\TI_DTV_code\images\img' num2str(image_number) '.jpg'];
 iml = imread(img_name);
 iml_ycbcr = rgb2ycbcr(iml);
 img_small = double(iml_ycbcr(:, :, 1));
@@ -30,9 +35,9 @@ img_small = double(iml_ycbcr(:, :, 1));
 % The initial points determine the subimage. You can use the script
 % select_subimage to save new initial points. 
 if image_number == 2
-    initial_point_string = ['C:\Users\Richard\Documents\ MSRA\TI_DTV_code\initial_points\initial_points_' num2str(image_number) '_1'];
+    initial_point_string = ['C:\Users\Richard\Documents\Â MSRA\TI_DTV_code\initial_points\initial_points_' num2str(image_number) '_1'];
 else
-    initial_point_string = ['C:\Users\Richard\Documents\ MSRA\TI_DTV_code\initial_points\initial_points_' num2str(image_number)];
+    initial_point_string = ['C:\Users\Richard\Documents\Â MSRA\TI_DTV_code\initial_points\initial_points_' num2str(image_number)];
 end
 load(initial_point_string);
 iter_TFOCS=200;
